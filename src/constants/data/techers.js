@@ -1,0 +1,58 @@
+export const TEACHERS = [
+  {
+    id: 1,
+    name: "Patricia",
+    description: "Natacion",
+    age: 30,
+    active: true,
+  },
+  {
+    id: 2,
+    name: "Joel",
+    description: "Tae-Kwon-do",
+    age: 35,
+    active: true,
+  },
+  {
+    id: 3,
+    name: "Esteban",
+    description: "Futbol infantil",
+    age: 28,
+    active: false,
+  },
+  {
+    id: 4,
+    name: "Jonhatan",
+    description: "Padel",
+    age: 39,
+    active: true,
+  },
+  {
+    id: 5,
+    name: "Matias",
+    description: "Natacion",
+    age: 30,
+    active: false,
+  },
+  {
+    id: 6,
+    name: "Matilde",
+    description: "Tenis",
+    age: 34,
+    active: true,
+  },
+  {
+    id: 7,
+    name: "Leonel",
+    description: "DT Futbol",
+    age: 42,
+    active: true,
+  },
+  {
+    id: 8,
+    name: "Jordan",
+    description: "Basquet",
+    age: 44,
+    active: true,
+  },
+];
