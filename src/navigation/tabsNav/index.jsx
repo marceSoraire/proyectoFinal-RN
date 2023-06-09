@@ -1,5 +1,6 @@
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { useSelector } from "react-redux";
 
 import { colorsTheme } from "../../constants";
 import InitNavigator from "../InitNav";
@@ -10,22 +11,25 @@ import SportNavigator from "../sportsNav";
 const BottomTab = createBottomTabNavigator();
 
 const TabsNavigator = () => {
+  const cart = useSelector((state) => state.cart.data);
+
   return (
     <BottomTab.Navigator
       initialRouteName="InitTab"
       screenOptions={{
         headerShown: false,
         tabBarLabelStyle: {
-          fontFamily: "medium",
-          fontSize: 12,
+          fontSize: 0,
         },
         tabBarActiveTintColor: colorsTheme.black,
-        tabBarInactiveTintColor: colorsTheme.tabs,
+        tabBarInactiveTintColor: colorsTheme.white,
         tabBarIconStyle: {
           fontSize: 20,
         },
-      }}
-    >
+        tabBarStyle: {
+          backgroundColor: colorsTheme.tabs,
+        },
+      }}>
       <BottomTab.Screen
         name="InitTab"
         component={InitNavigator}
@@ -61,7 +65,7 @@ const TabsNavigator = () => {
           tabBarLabel: "Sport",
           tabBarIcon: ({ focused, color, size }) => (
             <Ionicons
-              name={focused ? "lock-closed" : "lock-closed-outline"}
+              name={focused ? "ios-card" : "ios-card-outline"}
               size={size}
               color={color}
             />
@@ -80,6 +84,13 @@ const TabsNavigator = () => {
               color={color}
             />
           ),
+          tabBarBadge: cart.length,
+          tabBarBadgeStyle: {
+            backgroundColor: colorsTheme.gray,
+            color: colorsTheme.text,
+            fontFamily: "bold",
+            fontSize: 12,
+          },
         }}
       />
     </BottomTab.Navigator>

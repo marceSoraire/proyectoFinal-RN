@@ -1,6 +1,8 @@
 export const CATEGORIES = [
   {
     id: 1,
+    day: "Lun-Mie-Vie",
+    hs: "18 - 19",
     category: 1,
     name: "Futbol Mixto",
     price: 6500,
@@ -9,6 +11,8 @@ export const CATEGORIES = [
   },
   {
     id: 2,
+    day: "Lun-Mie-Vie",
+    hs: "18 - 19",
     category: 1,
     name: "Futbol Hombres",
     price: 7000,
@@ -17,6 +21,8 @@ export const CATEGORIES = [
   },
   {
     id: 3,
+    day: "Lun-Mie-Vie",
+    hs: "18 - 19",
     category: 1,
     name: "Futbol Mujeres",
     price: 7000,
@@ -25,6 +31,8 @@ export const CATEGORIES = [
   },
   {
     id: 4,
+    day: "Lun-Mie-Vie",
+    hs: "20 - 21",
     category: 2,
     name: "Basquet mixto",
     price: 5500,
@@ -34,6 +42,8 @@ export const CATEGORIES = [
   },
   {
     id: 5,
+    day: "Lun-Mie-Vie",
+    hs: "20 - 21",
     category: 2,
     name: "Basquet Hombres",
     price: 6000,
@@ -42,6 +52,8 @@ export const CATEGORIES = [
   },
   {
     id: 6,
+    day: "Lun-Mie-Vie",
+    hs: "20 - 21",
     category: 2,
     name: "Basquet Mujeres",
     price: 6000,
@@ -50,6 +62,8 @@ export const CATEGORIES = [
   },
   {
     id: 7,
+    day: "Lun-Mie-Vie",
+    hs: "17 - 19",
     category: 3,
     name: "Natacion menores",
     price: 6500,
@@ -59,6 +73,8 @@ export const CATEGORIES = [
   },
   {
     id: 8,
+    day: "Lun-Mie-Vie",
+    hs: "17 - 19",
     category: 3,
     name: "Natacion Federados",
     price: 7000,
@@ -68,6 +84,8 @@ export const CATEGORIES = [
   },
   {
     id: 9,
+    day: "Lun-Mie-Vie",
+    hs: "17 - 19",
     category: 3,
     name: "Natacion Mayores",
     price: 6500,
@@ -77,6 +95,8 @@ export const CATEGORIES = [
   },
   {
     id: 10,
+    day: "Mar-Jue-Sab",
+    hs: "18 - 19",
     category: 4,
     name: "Tae-Kuon-Do",
     price: 6000,
@@ -86,6 +106,8 @@ export const CATEGORIES = [
   },
   {
     id: 11,
+    day: "Mar-Jue-Sab",
+    hs: "18 - 19",
     category: 4,
     name: "Tae-Kuon-Do",
     price: 6500,
@@ -95,6 +117,8 @@ export const CATEGORIES = [
   },
   {
     id: 12,
+    day: "Mar-Jue-Sab",
+    hs: "18 - 19",
     category: 5,
     name: "Padel",
     price: 6500,
@@ -103,6 +127,8 @@ export const CATEGORIES = [
   },
   {
     id: 13,
+    day: "Lun-Mie-Vie",
+    hs: "9 - 10",
     category: 5,
     name: "Tenis",
     price: 7000,
@@ -112,6 +138,8 @@ export const CATEGORIES = [
   },
   {
     id: 14,
+    day: "Lun-Mie-Vie",
+    hs: "9 - 10",
     category: 5,
     name: "Tenis Hombre",
     price: 7000,
@@ -121,6 +149,8 @@ export const CATEGORIES = [
   },
   {
     id: 15,
+    day: "Lun-Mie-Vie",
+    hs: "9 - 10",
     category: 5,
     name: "Tenis Mujeres",
     price: 7000,
@@ -130,6 +160,8 @@ export const CATEGORIES = [
   },
   {
     id: 16,
+    day: "Lun a Sab",
+    hs: "9 - 21",
     category: 6,
     name: "Aparatos",
     price: 6500,
@@ -139,6 +171,8 @@ export const CATEGORIES = [
   },
   {
     id: 17,
+    day: "Mar-Jue-Sab",
+    hs: "14 - 16",
     category: 6,
     name: "Zumba",
     price: 5000,
@@ -147,6 +181,8 @@ export const CATEGORIES = [
   },
   {
     id: 18,
+    day: "Mar-Jue-Sab",
+    hs: "14 - 16",
     category: 7,
     name: "Boxeo Menores",
     price: 7000,
@@ -155,6 +191,8 @@ export const CATEGORIES = [
   },
   {
     id: 19,
+    day: "Mar-Jue-Sab",
+    hs: "14 - 16",
     category: 7,
     name: "Boxeo Hombres",
     price: 7000,
@@ -163,6 +201,8 @@ export const CATEGORIES = [
   },
   {
     id: 20,
+    day: "Lun-Mie-Vie",
+    hs: "18 - 19",
     category: 7,
     name: "Boxeo Mujeres",
     price: 7000,

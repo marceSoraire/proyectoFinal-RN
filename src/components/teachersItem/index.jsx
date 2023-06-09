@@ -15,13 +15,13 @@ const TeachersItem = ({ item, onRemove }) => {
         <View>
           <Text style={styles.description}>Teachers: {item.description}</Text>
           <Text style={styles.dates}>edad: {item.age}</Text>
-          <Text style={styles.dates}>is Active: </Text>
+          <Text style={styles.dates}>is Active: {item.active ? "True" : "False"}</Text>
         </View>
         <TouchableOpacity onPress={() => onRemove(item)}>
           <Ionicons
-            name={item.active ? "checkmark-circle" : "trash"}
+            name={item.active ? "checkmark-circle" : "ios-alert-circle"}
             size={22}
-            color={item.active ? colorsTheme.green : colorsTheme.red}
+            color={item.active ? colorsTheme.green : colorsTheme.primary}
           />
         </TouchableOpacity>
       </View>
