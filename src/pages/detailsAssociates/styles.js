@@ -6,12 +6,4 @@ export const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
-  textInit: {
-    fontSize: 26,
-    fontFamily: "medium",
-  },
-  image: {
-    width: 300,
-    height: 300,
-  },
 });

@@ -4,17 +4,15 @@ import { colorsTheme } from "../../constants";
 
 export const styles = StyleSheet.create({
   container: {
-    flex: 0.3,
+    marginVertical: 20,
+  },
+  preview: {
+    width: "100%",
+    height: 300,
     justifyContent: "center",
     alignItems: "center",
-    flexDirection: "row",
-  },
-  input: {
-    color: colorsTheme.text,
-    fontSize: 15,
-    paddingHorizontal: 8,
-    paddingVertical: 3,
+    borderColor: colorsTheme.background,
     borderWidth: 1,
-    borderRadius: 6,
+    marginBottom: 15,
   },
 });

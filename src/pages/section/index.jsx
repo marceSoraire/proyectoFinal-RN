@@ -19,19 +19,14 @@ const Section = () => {
         <Text style={styles.name}>{section.name}</Text>
         <Text style={styles.teacher}>Profesor/a: {leader.name}</Text>
         <Text style={styles.description}>{section.description}</Text>
-        <Text style={styles.price}>$ {section.price}</Text>
+        <Text style={styles.price}>$ {section.price} x Mes</Text>
       </View>
       <View style={styles.textContainer}>
         <Text style={styles.teacher}>Dias y Horarios</Text>
         <Text style={styles.day}>dias: {section.day}</Text>
         <Text style={styles.hs}>hs: {section.hs}</Text>
       </View>
-      <View style={styles.buttomContanier}>
-        <Button
-          title="Sign up"
-          onPress={() => null}
-        />
-      </View>
+      <View style={styles.buttomContanier} />
     </View>
   );
 };

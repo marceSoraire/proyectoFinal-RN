@@ -1,13 +1,13 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import { colorsTheme } from "../../constants";
-import { Disciplines, Category, Section } from "../../pages/index";
+import { Location, SavePlace } from "../../pages";
 const Stack = createNativeStackNavigator();
 
-const InitNavigator = () => {
+const LocationNavigator = () => {
   return (
     <Stack.Navigator
-      initialRouteName="Disciplines"
+      initialRouteName="Locations"
       screenOptions={{
         headerStyle: {
           backgroundColor: colorsTheme.background,
@@ -16,21 +16,15 @@ const InitNavigator = () => {
         headerTitleStyle: { fontFamily: "italic" },
       }}>
       <Stack.Screen
-        name="Disciplines"
-        component={Disciplines}
+        name="Locations"
+        component={Location}
       />
       <Stack.Screen
-        name="Category"
-        component={Category}
-        options={({ route }) => ({ title: route.params.name })}
-      />
-      <Stack.Screen
-        name="Section"
-        component={Section}
-        options={({ route }) => ({ title: route.params.name })}
+        name="SavePlace"
+        component={SavePlace}
       />
     </Stack.Navigator>
   );
 };
 
-export default InitNavigator;
+export default LocationNavigator;

@@ -3,18 +3,17 @@ import { FlatList, View } from "react-native";
 import { useSelector } from "react-redux";
 
 import { styles } from "./styles";
-import { AssociateItem } from "../../components";
+import { PlaceItem } from "../../components";
 
-const Associates = ({ navigation }) => {
+const SavePlace = ({ navigation }) => {
   const { places } = useSelector((state) => state.places);
 
   const onHandlerSelect = (id) => {
     navigation.navigate("DetailAssociates", { placeId: id });
   };
   const renderItem = ({ item }) => (
-    <AssociateItem
+    <PlaceItem
       item={item}
-      nAssociate={places.length}
       onselect={onHandlerSelect}
     />
   );
@@ -31,4 +30,4 @@ const Associates = ({ navigation }) => {
   );
 };
 
-export default Associates;
+export default SavePlace;

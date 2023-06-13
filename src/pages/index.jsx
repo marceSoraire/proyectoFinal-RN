@@ -1,6 +1,5 @@
 export { default as Category } from "./category/index";
 export { default as Disciplines } from "./disciplines/index";
-export { default as Init } from "./init/index";
 export { default as Partners } from "./partners/index";
 export { default as Sports } from "./sports/index";
 export { default as Cart } from "./cart/index";
@@ -8,3 +7,7 @@ export { default as Teachers } from "./teachers/index";
 export { default as Associates } from "./associates/index";
 export { default as Section } from "./section/index";
 export { default as Auth } from "./auth/index";
+export { default as Location } from "./location/index";
+export { default as NewAssociates } from "./newAssociates/index";
+export { default as DetailAssociates } from "./detailsAssociates/index";
+export { default as SavePlace } from "./savePlace/index";

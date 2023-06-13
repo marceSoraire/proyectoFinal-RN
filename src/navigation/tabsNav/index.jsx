@@ -5,6 +5,7 @@ import { useSelector } from "react-redux";
 import { colorsTheme } from "../../constants";
 import InitNavigator from "../InitNav";
 import CartNavigator from "../cartNav";
+import LocationNavigator from "../locationNav";
 import PartnersNavigator from "../partnersNav";
 import SportNavigator from "../sportsNav";
 
@@ -52,6 +53,20 @@ const TabsNavigator = () => {
           tabBarIcon: ({ focused, color, size }) => (
             <Ionicons
               name={focused ? "people-sharp" : "people-outline"}
+              size={size}
+              color={color}
+            />
+          ),
+        }}
+      />
+      <BottomTab.Screen
+        name="LocationsTab"
+        component={LocationNavigator}
+        options={{
+          tabBarLabel: "Locations",
+          tabBarIcon: ({ focused, color, size }) => (
+            <Ionicons
+              name={focused ? "location" : "location-outline"}
               size={size}
               color={color}
             />

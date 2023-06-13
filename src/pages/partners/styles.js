@@ -1,23 +1,18 @@
 import { StyleSheet } from "react-native";
 
+import { colorsTheme } from "../../constants";
+
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
-  textInit: {
-    marginTop: 15,
-    textAlign: "center",
-    fontSize: 22,
-    fontFamily: "medium",
-  },
-  bottomContainer: {
-    width: "100%",
-    marginVertical: 15,
-    flexDirection: "row",
-    justifyContent: "space-evenly",
+  content: {
+    marginBottom: 15,
   },
   image: {
     width: "100%",
     height: 300,
+    borderWidth: 1,
+    borderColor: colorsTheme.black,
   },
 });
