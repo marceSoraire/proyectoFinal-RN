@@ -8,3 +8,4 @@ export { default as ImageSelector } from "./imageSelector/index";
 export { default as PlaceItem } from "./placeItem/index";
 export { default as AssociateItem } from "./associateItem/index";
 export { default as MapPreview } from "./mapPreview/index";
+export { default as ImageUbi } from "./imageubi/index";

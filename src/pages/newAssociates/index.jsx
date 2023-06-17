@@ -5,7 +5,7 @@ import { useDispatch } from "react-redux";
 import { styles } from "./styles";
 import { ImageSelector } from "../../components";
 import { colorsTheme } from "../../constants";
-import { agregarPlace } from "../../store/actions/place.action";
+import { addAssociate } from "../../store/actions/associates.action";
 
 const NewAssociates = ({ navigation }) => {
   const dispatch = useDispatch();
@@ -17,7 +17,7 @@ const NewAssociates = ({ navigation }) => {
   };
 
   const onHandlerSubmit = () => {
-    dispatch(agregarPlace({ title: text, image }));
+    dispatch(addAssociate({ title: text, image }));
     navigation.navigate("Associates");
   };
 

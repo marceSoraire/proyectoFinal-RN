@@ -1,5 +1,6 @@
+import { useNavigation, useRoute } from "@react-navigation/native";
 import { getCurrentPositionAsync, requestForegroundPermissionsAsync } from "expo-location";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { View, Text, Button, Alert } from "react-native";
 
 import { styles } from "./styles";
@@ -7,6 +8,10 @@ import { colorsTheme } from "../../constants";
 import MapPreview from "../mapPreview/index";
 
 const LocationSelector = ({ onLocation }) => {
+  const navigation = useNavigation();
+  const route = useRoute();
+
+  const { mapLocation } = route.params || {};
   const [pickedLocation, setPickedLocation] = useState(null);
 
   const verifyPermissions = async () => {
@@ -21,7 +26,7 @@ const LocationSelector = ({ onLocation }) => {
     return true;
   };
 
-  const onHandlerLocation = async () => {
+  const onHandlerLocation = async (isMaps = false) => {
     const isLocationPermission = await verifyPermissions();
     if (!isLocationPermission) return;
     const location = await getCurrentPositionAsync({
@@ -32,7 +37,16 @@ const LocationSelector = ({ onLocation }) => {
 
     setPickedLocation({ lat: latitude, lng: longitude });
     onLocation({ lat: latitude, lng: longitude });
+    if (isMaps) navigation.navigate("Maps", { location: { lat: latitude, lng: longitude } });
   };
+
+  useEffect(() => {
+    if (mapLocation) {
+      setPickedLocation(mapLocation);
+      onLocation(mapLocation);
+    }
+  }, [mapLocation]);
+
   return (
     <View style={styles.container}>
       <MapPreview
@@ -40,11 +54,20 @@ const LocationSelector = ({ onLocation }) => {
         style={styles.preview}>
         <Text>No seleccionaste ninguna ubicacion</Text>
       </MapPreview>
-      <Button
-        title="Ubicacion proxima competencia"
-        onPress={onHandlerLocation}
-        color={colorsTheme.background}
-      />
+      <View style={styles.btns}>
+        <Button
+          title="Ubicacion proxima competencia"
+          onPress={onHandlerLocation}
+          color={colorsTheme.background}
+        />
+      </View>
+      <View style={styles.btns}>
+        <Button
+          title="Seleccionar Ubicacion"
+          color={colorsTheme.background}
+          onPress={() => onHandlerLocation(true)}
+        />
+      </View>
     </View>
   );
 };

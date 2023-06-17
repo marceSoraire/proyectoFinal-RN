@@ -8,11 +8,15 @@ export const styles = StyleSheet.create({
   },
   preview: {
     width: "100%",
-    height: 300,
+    height: 200,
     justifyContent: "center",
     alignItems: "center",
     borderColor: colorsTheme.background,
     borderWidth: 1,
     marginBottom: 15,
+  },
+  btns: {
+    paddingVertical: 10,
+    justifyContent: "space-between",
   },
 });

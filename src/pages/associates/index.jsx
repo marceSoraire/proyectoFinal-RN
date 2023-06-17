@@ -1,33 +1,31 @@
 import React from "react";
-import { FlatList, View } from "react-native";
+import { FlatList } from "react-native";
 import { useSelector } from "react-redux";
 
 import { styles } from "./styles";
 import { AssociateItem } from "../../components";
 
 const Associates = ({ navigation }) => {
-  const { places } = useSelector((state) => state.places);
+  const { associates } = useSelector((state) => state.associates);
 
   const onHandlerSelect = (id) => {
-    navigation.navigate("DetailAssociates", { placeId: id });
+    navigation.navigate("DetailAssociates", { associateId: id });
   };
   const renderItem = ({ item }) => (
     <AssociateItem
       item={item}
-      nAssociate={places.length}
+      nAssociate={associates.length}
       onselect={onHandlerSelect}
     />
   );
   const KeyExtractor = (item) => item.id;
   return (
-    <View style={styles.listContainer}>
-      <FlatList
-        data={places}
-        style={styles.container}
-        keyExtractor={KeyExtractor}
-        renderItem={renderItem}
-      />
-    </View>
+    <FlatList
+      data={associates}
+      style={styles.container}
+      keyExtractor={KeyExtractor}
+      renderItem={renderItem}
+    />
   );
 };
 

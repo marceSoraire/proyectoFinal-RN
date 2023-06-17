@@ -2,9 +2,19 @@ import { useFonts } from "expo-font";
 import { ActivityIndicator, View } from "react-native";
 import { Provider } from "react-redux";
 
+import { init } from "./db";
 import AppNavigation from "./navigation";
 import store from "./store";
 import { styles } from "./styles";
+
+init()
+  .then(() => {
+    console.log("Iniciando database");
+  })
+  .catch((err) => {
+    console.log("Inicio fallido");
+    console.log(err);
+  });
 
 export default function App() {
   const [loaded] = useFonts({

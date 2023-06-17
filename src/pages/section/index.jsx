@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, Image, Button } from "react-native";
+import { View, Text, Image } from "react-native";
 import { useSelector } from "react-redux";
 
 import { styles } from "./styles";
@@ -26,7 +26,6 @@ const Section = () => {
         <Text style={styles.day}>dias: {section.day}</Text>
         <Text style={styles.hs}>hs: {section.hs}</Text>
       </View>
-      <View style={styles.buttomContanier} />
     </View>
   );
 };

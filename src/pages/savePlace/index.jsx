@@ -1,32 +1,27 @@
 import React from "react";
-import { FlatList, View } from "react-native";
-import { useSelector } from "react-redux";
+import { FlatList } from "react-native";
+import { useDispatch, useSelector } from "react-redux";
 
 import { styles } from "./styles";
-import { PlaceItem } from "../../components";
+import { PlaceItem } from "../../components/index";
 
-const SavePlace = ({ navigation }) => {
-  const { places } = useSelector((state) => state.places);
+const SavePlace = () => {
+  // const dispatch = useDispatch;
+  const places = useSelector((state) => state.place.places);
 
-  const onHandlerSelect = (id) => {
-    navigation.navigate("DetailAssociates", { placeId: id });
-  };
-  const renderItem = ({ item }) => (
-    <PlaceItem
-      item={item}
-      onselect={onHandlerSelect}
-    />
-  );
+  // useEffect(() => {
+  //   dispatch(getPlaces());
+  // }, [dispatch]);
+
+  const renderItem = ({ item }) => <PlaceItem {...item} />;
   const KeyExtractor = (item) => item.id;
   return (
-    <View style={styles.listContainer}>
-      <FlatList
-        data={places}
-        style={styles.container}
-        keyExtractor={KeyExtractor}
-        renderItem={renderItem}
-      />
-    </View>
+    <FlatList
+      data={places}
+      style={styles.container}
+      keyExtractor={KeyExtractor}
+      renderItem={renderItem}
+    />
   );
 };
 

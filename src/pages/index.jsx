@@ -11,3 +11,4 @@ export { default as Location } from "./location/index";
 export { default as NewAssociates } from "./newAssociates/index";
 export { default as DetailAssociates } from "./detailsAssociates/index";
 export { default as SavePlace } from "./savePlace/index";
+export { default as Maps } from "./maps/index";

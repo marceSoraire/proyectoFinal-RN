@@ -8,6 +8,7 @@ export const styles = StyleSheet.create({
   },
   preview: {
     marginHorizontal: 80,
+    position: "relative",
     width: 200,
     height: 200,
     justifyContent: "center",
@@ -17,15 +18,19 @@ export const styles = StyleSheet.create({
     marginBottom: 20,
     borderRadius: 100,
   },
+  noImage: {
+    width: "100%",
+    height: "100%",
+    borderRadius: 100,
+  },
   image: {
     width: "100%",
     height: "100%",
     borderRadius: 100,
   },
   cam: {
-    alignItems: "flex-end",
-    marginRight: 120,
-    marginBottom: 20,
-    marginTop: -40,
+    position: "absolute",
+    bottom: -10,
+    right: 10,
   },
 });

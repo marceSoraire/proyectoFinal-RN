@@ -5,28 +5,29 @@ import { colorsTheme } from "../../constants";
 export const styles = StyleSheet.create({
   container: {
     padding: 20,
-    flexDirection: "row",
     alignItems: "center",
     borderBottomColor: colorsTheme.background,
     borderBottomWidth: 1,
   },
   image: {
-    width: 130,
-    height: 100,
-    backgroundColor: colorsTheme.secondary,
+    width: "100%",
+    height: 150,
     borderRadius: 5,
     borderWidth: 1,
     borderColor: colorsTheme.black,
   },
   info: {
-    margin: 20,
-    flex: 1,
     justifyContent: "center",
-    alignItems: "flex-start",
+    alignItems: "center",
   },
   title: {
     fontFamily: "semiBold",
-    fontSize: 16,
+    fontSize: 17,
+    color: colorsTheme.text,
+  },
+  coords: {
+    fontFamily: "italic",
+    fontSize: 14,
     color: colorsTheme.text,
   },
 });
