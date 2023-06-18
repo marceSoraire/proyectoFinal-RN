@@ -1,7 +1,9 @@
 class Associate {
-  constructor(id, title, image) {
+  constructor(id, name, lastName, age, image) {
     this.id = id.toString();
-    this.title = title;
+    this.name = name;
+    this.lastName = lastName;
+    this.age = age;
     this.image = image;
   }
 }

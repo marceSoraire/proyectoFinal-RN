@@ -22,11 +22,21 @@ export const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "flex-start",
   },
-  title: {
+  name: {
     fontFamily: "semiBold",
     fontSize: 18,
     color: colorsTheme.text,
   },
+  // lastName: {
+  //   fontFamily: "semiBold",
+  //   fontSize: 17,
+  //   color: colorsTheme.text,
+  // },
+  // age: {
+  //   fontFamily: "italic",
+  //   fontSize: 16,
+  //   color: colorsTheme.text,
+  // },
   nAssociate: {
     fontFamily: "italic",
     fontSize: 14,

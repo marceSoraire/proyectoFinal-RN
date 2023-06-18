@@ -8,14 +8,14 @@ import { AssociateItem } from "../../components";
 const Associates = ({ navigation }) => {
   const { associates } = useSelector((state) => state.associates);
 
-  const onHandlerSelect = (id) => {
-    navigation.navigate("DetailAssociates", { associateId: id });
+  const onHandlerSelect = (item) => {
+    navigation.navigate("DetailAssociates", { associateId: item.id });
   };
   const renderItem = ({ item }) => (
     <AssociateItem
       item={item}
       nAssociate={associates.length}
-      onselect={onHandlerSelect}
+      onselect={() => onHandlerSelect(item)}
     />
   );
   const KeyExtractor = (item) => item.id;

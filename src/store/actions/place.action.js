@@ -21,6 +21,7 @@ export const addPlaceAsync = (title, img, location) => {
       if (!data.results) Alert.alert("Error", "No se ha podido encontrar la direccion");
 
       const addres = data.results[0].formatted_address;
+
       const result = await insertPlace(title, img, addres, location);
       const newPlace = new Place(result.insertId, title, img, addres, location);
 
@@ -37,7 +38,9 @@ export const getPlaces = () => {
       const result = await selectPlaces();
       const selected = result?.rows?._array;
 
-      dispatch(selected);
+      if (selected) {
+        dispatch(addPlace(selected));
+      }
     } catch (error) {
       console.error(error);
     }

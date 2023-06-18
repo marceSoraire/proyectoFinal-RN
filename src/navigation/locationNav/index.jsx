@@ -3,7 +3,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { TouchableOpacity } from "react-native";
 
 import { colorsTheme } from "../../constants";
-import { Location, SavePlace, Maps } from "../../pages";
+import { Location, SavePlace, Maps, DetailsPlaces } from "../../pages";
 const Stack = createNativeStackNavigator();
 
 const LocationNavigator = () => {
@@ -39,6 +39,10 @@ const LocationNavigator = () => {
       <Stack.Screen
         name="Maps"
         component={Maps}
+      />
+      <Stack.Screen
+        name="DetailsPlaces"
+        component={DetailsPlaces}
       />
     </Stack.Navigator>
   );

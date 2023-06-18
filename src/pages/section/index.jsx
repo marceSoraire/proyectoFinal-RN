@@ -1,13 +1,19 @@
+import { useNavigation } from "@react-navigation/native";
 import React from "react";
-import { View, Text, Image } from "react-native";
+import { View, Text, Image, Button } from "react-native";
 import { useSelector } from "react-redux";
 
 import { styles } from "./styles";
-import { TEACHERS } from "../../constants";
+import { TEACHERS, colorsTheme } from "../../constants";
 
 const Section = () => {
+  const navigation = useNavigation();
   const section = useSelector((state) => state.categorys.selected);
   const leader = TEACHERS.find((t) => t.id === section.id);
+
+  const onHandlerAssociate = () => {
+    navigation.navigate("NewAssociates");
+  };
 
   return (
     <View style={styles.container}>
@@ -26,6 +32,11 @@ const Section = () => {
         <Text style={styles.day}>dias: {section.day}</Text>
         <Text style={styles.hs}>hs: {section.hs}</Text>
       </View>
+      <Button
+        title="Ser Socio!"
+        color={colorsTheme.background}
+        onPress={onHandlerAssociate}
+      />
     </View>
   );
 };

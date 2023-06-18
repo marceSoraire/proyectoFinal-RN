@@ -1,18 +1,18 @@
 import { View, TouchableOpacity, Image, Text } from "react-native";
 
 import { styles } from "./styles";
-const AssociateItem = ({ item, nAssociate, onselect }) => {
+const AssociateItem = ({ item, onselect }) => {
   return (
     <TouchableOpacity
       style={styles.container}
-      onPress={() => onselect(item.id)}>
+      onPress={() => onselect(item)}>
       <Image
         style={styles.image}
         source={{ uri: item.image }}
       />
       <View style={styles.info}>
-        <Text style={styles.title}>{item.title}</Text>
-        <Text style={styles.nAssociate}>N° associate: {nAssociate}</Text>
+        <Text style={styles.name}>{item.name}</Text>
+        <Text style={styles.nAssociate}>N° associate: {item.id}</Text>
       </View>
     </TouchableOpacity>
   );

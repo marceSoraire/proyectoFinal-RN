@@ -5,10 +5,11 @@ import { colorsTheme } from "../../constants";
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
+    marginTop: 50,
   },
   content: {
-    flex: 1,
-    margin: 20,
+    justifyContent: "center",
+    alignItems: "center",
   },
   title: {
     fontFamily: "semiBold",
@@ -16,9 +17,10 @@ export const styles = StyleSheet.create({
     paddingBottom: 15,
   },
   input: {
+    width: "50%",
     borderBottomColor: colorsTheme.background,
     borderBottomWidth: 1,
-    marginBottom: 15,
-    padding: 5,
+    marginBottom: 20,
+    padding: 10,
   },
 });

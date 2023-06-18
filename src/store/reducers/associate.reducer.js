@@ -9,7 +9,13 @@ const associateReducer = (state = intialState, action) => {
   switch (action.type) {
     case associateTypes.ADD_ASSOCIATE:
       // eslint-disable-next-line no-case-declarations
-      const newAssociates = new Associate(Date.now(), action.payload.title, action.payload.image);
+      const newAssociates = new Associate(
+        Date.now(),
+        action.payload.name,
+        action.payload.lastName,
+        action.payload.age,
+        action.payload.image
+      );
       return {
         ...state,
         associates: [...state.associates, newAssociates],

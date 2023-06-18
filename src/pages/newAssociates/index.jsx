@@ -9,15 +9,23 @@ import { addAssociate } from "../../store/actions/associates.action";
 
 const NewAssociates = ({ navigation }) => {
   const dispatch = useDispatch();
-  const [text, setText] = useState("");
+  const [name, setName] = useState("");
+  const [lastName, setLatsName] = useState("");
+  const [age, setAge] = useState("");
   const [image, setImage] = useState("");
 
-  const onHandlerChangeText = (text) => {
-    setText(text);
+  const onHandlerChangeName = (name) => {
+    setName(name);
+  };
+  const onHandlerChangeLastName = (lastName) => {
+    setLatsName(lastName);
+  };
+  const onHandlerChangeAge = (age) => {
+    setAge(age);
   };
 
   const onHandlerSubmit = () => {
-    dispatch(addAssociate({ title: text, image }));
+    dispatch(addAssociate({ name, lastName, age, image }));
     navigation.navigate("Associates");
   };
 
@@ -31,9 +39,21 @@ const NewAssociates = ({ navigation }) => {
         <ImageSelector onImage={onImage} />
         <TextInput
           style={styles.input}
-          placeholder="Nombre/Apellido - año"
-          onChangeText={onHandlerChangeText}
-          value={text}
+          placeholder="Nombre"
+          onChangeText={onHandlerChangeName}
+          value={name}
+        />
+        <TextInput
+          style={styles.input}
+          placeholder="Apellido"
+          onChangeText={onHandlerChangeLastName}
+          value={lastName}
+        />
+        <TextInput
+          style={styles.input}
+          placeholder="Año"
+          onChangeText={onHandlerChangeAge}
+          value={age}
         />
         <Button
           title="Agregar Socio"
