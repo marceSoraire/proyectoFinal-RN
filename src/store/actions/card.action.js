@@ -1,6 +1,6 @@
 import { FIREBASE_REALTIME_DB_URL } from "../../constants";
 import { cartTypes } from "../types";
-const { ADD_CART, REMOVE_CART, CONFIRM_SPORT } = cartTypes;
+const { ADD_CART, REMOVE_CART, CONFIRM_SPORT, REST } = cartTypes;
 
 export const addCart = (sports) => ({
   type: ADD_CART,
@@ -10,6 +10,11 @@ export const addCart = (sports) => ({
 export const removeCart = (id) => ({
   type: REMOVE_CART,
   id,
+});
+
+export const onRest = (sports) => ({
+  type: REST,
+  item: sports,
 });
 
 export const confirmSport = ({ cart, total }) => {

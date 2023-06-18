@@ -1,4 +1,3 @@
-// import Ionicons from "@expo/vector-icons/Ionicons";
 import { MaterialIcons } from "@expo/vector-icons";
 import { requestCameraPermissionsAsync, launchCameraAsync } from "expo-image-picker";
 import { useState } from "react";

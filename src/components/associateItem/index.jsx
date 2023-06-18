@@ -12,7 +12,7 @@ const AssociateItem = ({ item, onselected }) => {
       />
       <View style={styles.info}>
         <Text style={styles.name}>{item.name}</Text>
-        <Text style={styles.nAssociate}>N° associate: {item.id}</Text>
+        <Text style={styles.nAssociate}>N° Socio: {item.id}</Text>
       </View>
     </TouchableOpacity>
   );

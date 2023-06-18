@@ -1,7 +1,7 @@
-import { sumaTotal } from "../../utils";
+import { sumaTotal, rest } from "../../utils/functions/index";
 import { cartTypes } from "../types";
 
-const { ADD_CART, REMOVE_CART, CONFIRM_SPORT } = cartTypes;
+const { ADD_CART, REMOVE_CART, CONFIRM_SPORT, REST } = cartTypes;
 
 const initialState = {
   data: [],
@@ -25,6 +25,26 @@ const cartReducer = (state = initialState, action) => {
         ...state,
         data: updateCart,
         total: sumaTotal(updateCart),
+      };
+
+    case REST:
+      let restCar;
+      if (action.item.quantity >= 1) {
+        if (state.data.find((item) => item.id === action.item.id)) {
+          restCar = state.data.map((item) => {
+            if (item.id === action.item.id) item.quantity -= 1;
+            return item;
+          });
+        }
+      } else {
+        return {
+          ...state,
+        };
+      }
+      return {
+        ...state,
+        data: restCar,
+        total: sumaTotal(restCar),
       };
 
     case REMOVE_CART:

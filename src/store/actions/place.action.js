@@ -38,6 +38,8 @@ export const getPlaces = () => {
       const result = await selectPlaces();
       const selected = result?.rows?._array;
 
+      console.log(selected);
+
       if (selected) {
         dispatch(addPlace(selected));
       }

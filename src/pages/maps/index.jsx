@@ -37,7 +37,7 @@ const Maps = ({ navigation, route }) => {
           <Ionicons
             name="md-save-sharp"
             size={23}
-            color={!selectedLocation ? colorsTheme.white : colorsTheme.text}
+            color={!selectedLocation ? colorsTheme.text : colorsTheme.white}
           />
         </TouchableOpacity>
       ),

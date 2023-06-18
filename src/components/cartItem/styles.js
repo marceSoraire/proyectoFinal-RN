@@ -16,14 +16,8 @@ export const styles = StyleSheet.create({
     elevation: 3,
     marginHorizontal: 10,
     marginVertical: 6,
-    paddingVertical: 10,
+    paddingVertical: 18,
     paddingHorizontal: 20,
-  },
-  header: {
-    fontSize: 16,
-    fontFamily: "bold",
-    color: colorsTheme.text,
-    marginBottom: 5,
   },
   body: {
     flex: 1,
@@ -32,12 +26,20 @@ export const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
   },
-  bodyContent: {
-    flex: 1,
+  header: {
+    fontSize: 16,
+    fontFamily: "bold",
+    color: colorsTheme.text,
+    marginBottom: 5,
+  },
+  add: {
+    justifyContent: "space-between",
+    flexDirection: "row",
   },
   quantity: {
-    fontSize: 14,
-    fontFamily: "regular",
+    fontSize: 15,
+    paddingHorizontal: 15,
+    fontFamily: "semiBold",
     color: colorsTheme.text,
     marginBottom: 5,
   },

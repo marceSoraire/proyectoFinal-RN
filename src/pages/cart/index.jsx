@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 
 import { styles } from "./styles";
 import { CartItem } from "../../components";
-import { removeCart, confirmSport } from "../../store/actions";
+import { removeCart, confirmSport, addCart, onRest } from "../../store/actions";
 
 const Cart = () => {
   const dispatch = useDispatch();
@@ -16,6 +16,14 @@ const Cart = () => {
     dispatch(removeCart(id));
   };
 
+  const onAddCart = (item) => {
+    dispatch(addCart(item));
+  };
+
+  const onRestCart = (item) => {
+    dispatch(onRest(item));
+  };
+
   const onConfirm = () => {
     dispatch(confirmSport({ cart, total }));
   };
@@ -23,6 +31,8 @@ const Cart = () => {
     <CartItem
       item={item}
       onRemove={onRemove}
+      onAddCart={onAddCart}
+      onRestCart={onRestCart}
     />
   );
   const keyExtractor = (item) => item.id;

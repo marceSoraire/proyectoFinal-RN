@@ -5,33 +5,54 @@ import { colorsTheme } from "../../constants/index";
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: colorsTheme.gray,
+  },
+  imgPreview: {
+    justifyContent: "center",
+    alignItems: "center",
   },
   image: {
-    height: "40%",
-    minHeight: 220,
-    width: "100%",
+    marginVertical: 40,
+    width: 300,
+    height: 300,
+    borderRadius: 150,
+    borderWidth: 1,
+    borderColor: colorsTheme.black,
+  },
+  location: {
+    justifyContent: "center",
+    alignItems: "center",
   },
   datesContainer: {
+    width: "70%",
     padding: 25,
   },
+  row: {
+    flexDirection: "row",
+  },
+  title: {
+    fontFamily: "semiBold",
+    fontSize: 20,
+    color: colorsTheme.black,
+  },
   name: {
-    fontFamily: "medium",
+    fontFamily: "italic",
     fontSize: 20,
     color: colorsTheme.text,
   },
   lastName: {
-    fontFamily: "medium",
+    fontFamily: "italic",
     fontSize: 20,
     color: colorsTheme.text,
   },
   age: {
-    fontFamily: "regular",
-    fontSize: 15,
+    fontFamily: "italic",
+    fontSize: 20,
     color: colorsTheme.text,
   },
   num: {
     fontFamily: "italic",
-    fontSize: 15,
-    color: colorsTheme.text,
+    fontSize: 20,
+    color: colorsTheme.primary,
   },
 });
