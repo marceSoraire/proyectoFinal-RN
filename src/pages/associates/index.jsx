@@ -6,16 +6,16 @@ import { styles } from "./styles";
 import { AssociateItem } from "../../components";
 
 const Associates = ({ navigation }) => {
-  const { associates } = useSelector((state) => state.associates);
+  const associates = useSelector((state) => state.associate.associates);
 
-  const onHandlerSelect = (item) => {
-    navigation.navigate("DetailAssociates", { associateId: item.id });
+  const onHandlerAssociate = (item) => {
+    navigation.navigate("DetailsAssociates", { associateId: item.id });
   };
   const renderItem = ({ item }) => (
     <AssociateItem
       item={item}
       nAssociate={associates.length}
-      onselect={() => onHandlerSelect(item)}
+      onselected={onHandlerAssociate}
     />
   );
   const KeyExtractor = (item) => item.id;

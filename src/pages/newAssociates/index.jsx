@@ -51,7 +51,7 @@ const NewAssociates = ({ navigation }) => {
         />
         <TextInput
           style={styles.input}
-          placeholder="Año"
+          placeholder="Edad"
           onChangeText={onHandlerChangeAge}
           value={age}
         />

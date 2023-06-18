@@ -13,6 +13,7 @@ const LocationSelector = ({ onLocation }) => {
 
   const { mapLocation } = route.params || {};
   const [pickedLocation, setPickedLocation] = useState(null);
+  const [isMaps, setIsMaps] = useState(false);
 
   const verifyPermissions = async () => {
     const { status } = await requestForegroundPermissionsAsync();
@@ -26,7 +27,7 @@ const LocationSelector = ({ onLocation }) => {
     return true;
   };
 
-  const onHandlerLocation = async (isMaps = false) => {
+  const onHandlerLocation = async () => {
     const isLocationPermission = await verifyPermissions();
     if (!isLocationPermission) return;
     const location = await getCurrentPositionAsync({
@@ -65,7 +66,7 @@ const LocationSelector = ({ onLocation }) => {
         <Button
           title="Seleccionar Ubicacion"
           color={colorsTheme.background}
-          onPress={() => onHandlerLocation(true)}
+          onPress={() => onHandlerLocation(setIsMaps(true))}
         />
       </View>
     </View>

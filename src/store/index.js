@@ -18,7 +18,7 @@ const rootReducer = combineReducers({
   sports: sportsReducer,
   auth: authReducer,
   place: placeReducer,
-  associates: associateReducer,
+  associate: associateReducer,
 });
 
 export default createStore(rootReducer, applyMiddleware(thunk));

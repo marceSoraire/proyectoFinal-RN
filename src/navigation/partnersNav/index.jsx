@@ -3,7 +3,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { TouchableOpacity } from "react-native";
 
 import { colorsTheme } from "../../constants";
-import { Partners, Teachers, Associates, NewAssociates, DetailAssociates } from "../../pages";
+import { Partners, Teachers, Associates, NewAssociates, DetailsAssociates } from "../../pages";
 
 const Stack = createNativeStackNavigator();
 
@@ -42,8 +42,8 @@ const PartnersNavigator = () => {
         })}
       />
       <Stack.Screen
-        name="DetailAssociates"
-        component={DetailAssociates}
+        name="DetailsAssociates"
+        component={DetailsAssociates}
       />
       <Stack.Screen
         name="NewAssociates"

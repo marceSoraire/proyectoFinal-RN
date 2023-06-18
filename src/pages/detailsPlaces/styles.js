@@ -27,10 +27,11 @@ export const styles = StyleSheet.create({
     padding: 20,
   },
   address: {
-    color: colorsTheme.primary,
+    fontFamily: "medium",
+    color: colorsTheme.text,
     textAlign: "center",
   },
   map: {
-    height: 220,
+    height: 250,
   },
 });

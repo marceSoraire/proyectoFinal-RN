@@ -1,11 +1,11 @@
 import { View, TouchableOpacity, Image, Text } from "react-native";
 
 import { styles } from "./styles";
-const AssociateItem = ({ item, onselect }) => {
+const AssociateItem = ({ item, onselected }) => {
   return (
     <TouchableOpacity
       style={styles.container}
-      onPress={() => onselect(item)}>
+      onPress={() => onselected(item)}>
       <Image
         style={styles.image}
         source={{ uri: item.image }}
