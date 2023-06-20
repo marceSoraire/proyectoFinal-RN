@@ -1,9 +1,9 @@
 import React from "react";
-import { View, Text, Image, Button } from "react-native";
+import { View, Text, Image } from "react-native";
 import { useSelector } from "react-redux";
 
 import { styles } from "./styles";
-import { TEACHERS, colorsTheme } from "../../constants";
+import { TEACHERS } from "../../constants";
 
 const Section = () => {
   const section = useSelector((state) => state.categorys.selected);
@@ -23,7 +23,7 @@ const Section = () => {
       </View>
       <View style={styles.textContainer}>
         <Text style={styles.teacher}>Dias y Horarios</Text>
-        <Text style={styles.day}>dias: {section.day}</Text>
+        <Text style={styles.day}>Dias: {section.day}</Text>
         <Text style={styles.hs}>hs: {section.hs}</Text>
       </View>
     </View>

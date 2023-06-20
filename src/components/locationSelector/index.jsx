@@ -10,7 +10,6 @@ import MapPreview from "../mapPreview/index";
 const LocationSelector = ({ onLocation }) => {
   const navigation = useNavigation();
   const route = useRoute();
-
   const { mapLocation } = route.params || {};
   const [pickedLocation, setPickedLocation] = useState(null);
   const [isMaps, setIsMaps] = useState(false);

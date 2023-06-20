@@ -22,7 +22,7 @@ export const styles = StyleSheet.create({
   teacher: {
     paddingVertical: 5,
     fontSize: 17,
-    fontFamily: "italic",
+    fontFamily: "semiBold",
   },
   description: {
     paddingVertical: 5,

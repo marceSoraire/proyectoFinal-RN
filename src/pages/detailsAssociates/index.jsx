@@ -1,4 +1,4 @@
-import { View, Text, ScrollView, Image } from "react-native";
+import { View, Text, Image } from "react-native";
 import { useSelector } from "react-redux";
 
 import { styles } from "./styles";
@@ -10,7 +10,7 @@ const DetailsAssociate = ({ route }) => {
   );
 
   return (
-    <ScrollView style={styles.container}>
+    <View style={styles.container}>
       <View style={styles.imgPreview}>
         <Image
           source={{ uri: associates.image }}
@@ -37,7 +37,7 @@ const DetailsAssociate = ({ route }) => {
           </View>
         </View>
       </View>
-    </ScrollView>
+    </View>
   );
 };
 

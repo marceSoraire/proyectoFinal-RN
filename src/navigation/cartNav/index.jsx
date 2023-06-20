@@ -14,9 +14,11 @@ const CartNavigator = () => {
         },
         headerTintColor: colorsTheme.black,
         headerTitleStyle: { fontFamily: "italic" },
-      }}
-    >
-      <Stack.Screen name="Cart" component={Cart} />
+      }}>
+      <Stack.Screen
+        name="Cart"
+        component={Cart}
+      />
     </Stack.Navigator>
   );
 };

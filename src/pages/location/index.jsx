@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { View, ScrollView, Text, TextInput, Button, Alert } from "react-native";
+import { View, ScrollView, Text, TextInput, Button } from "react-native";
 import { useDispatch } from "react-redux";
 
 import { styles } from "./styles";
@@ -10,26 +10,24 @@ import { addPlaceAsync } from "../../store/actions/place.action";
 const Location = ({ navigation }) => {
   const dispatch = useDispatch();
   const [text, setText] = useState("");
-  const [img, setImg] = useState("");
-  const [location, setLocation] = useState(null);
+  const [image, setImg] = useState("");
+  const [coords, setCoords] = useState(null);
 
-  const enable = text && img && location;
+  const enable = text && image && coords;
 
   const onHandlerChangeText = (text) => {
     setText(text);
   };
-
-  const onHandlerLocation = () => {
-    dispatch(addPlaceAsync(text, img, location));
-    navigation.navigate("SavePlace");
-  };
-
   const onLocation = (ubiLocation) => {
-    setLocation(ubiLocation);
+    setCoords(ubiLocation);
   };
-
   const onImg = (imageUri) => {
     setImg(imageUri);
+  };
+
+  const onHandlerLocation = () => {
+    dispatch(addPlaceAsync(text, image, coords));
+    navigation.navigate("SavePlace");
   };
 
   return (

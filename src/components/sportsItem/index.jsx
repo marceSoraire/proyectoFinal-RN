@@ -22,7 +22,7 @@ const SportsItem = ({ item }) => {
       <View style={styles.bodyContainer}>
         <View style={styles.content}>
           <Text style={styles.header}>{item.name}</Text>
-          <Text style={styles.price}>$: {item.price}</Text>
+          <Text style={styles.price}>${item.price}</Text>
         </View>
         <TouchableOpacity onPress={() => onAddCart(item.id)}>
           <MaterialIcons

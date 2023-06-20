@@ -2,7 +2,7 @@ import { View, TouchableOpacity, Image, Text } from "react-native";
 
 import { styles } from "./styles";
 
-const PlaceItem = ({ id, title, img, address, onSelect }) => {
+const PlaceItem = ({ id, title, image, address, onSelect }) => {
   return (
     <TouchableOpacity
       style={styles.container}
@@ -13,7 +13,7 @@ const PlaceItem = ({ id, title, img, address, onSelect }) => {
       </View>
       <Image
         style={styles.image}
-        source={{ uri: img }}
+        source={{ uri: image }}
       />
     </TouchableOpacity>
   );

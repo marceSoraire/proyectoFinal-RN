@@ -1,11 +1,11 @@
 import Ionicons from "@expo/vector-icons/Ionicons";
 import React from "react";
-import { Text, TouchableOpacity, View } from "react-native";
+import { Text, View } from "react-native";
 
 import { styles } from "./styles";
 import { colorsTheme } from "../../constants";
 
-const TeachersItem = ({ item, onRemove }) => {
+const TeachersItem = ({ item }) => {
   return (
     <View style={styles.container}>
       <View>
@@ -17,13 +17,13 @@ const TeachersItem = ({ item, onRemove }) => {
           <Text style={styles.dates}>edad: {item.age}</Text>
           <Text style={styles.dates}>is Active: {item.active ? "True" : "False"}</Text>
         </View>
-        <TouchableOpacity onPress={() => onRemove(item)}>
+        <View>
           <Ionicons
             name={item.active ? "checkmark-circle" : "ios-alert-circle"}
-            size={22}
+            size={25}
             color={item.active ? colorsTheme.green : colorsTheme.primary}
           />
-        </TouchableOpacity>
+        </View>
       </View>
     </View>
   );

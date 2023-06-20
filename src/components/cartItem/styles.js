@@ -4,7 +4,7 @@ import { colorsTheme } from "../../constants";
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    height: 100,
+    height: 130,
     backgroundColor: colorsTheme.white,
     shadowColor: "#000",
     shadowOffset: {
@@ -17,13 +17,28 @@ export const styles = StyleSheet.create({
     marginHorizontal: 10,
     marginVertical: 6,
     paddingVertical: 18,
-    paddingHorizontal: 20,
+    paddingHorizontal: 15,
   },
   body: {
     flex: 1,
     flexDirection: "row",
     flexWrap: "wrap",
     justifyContent: "space-between",
+    alignItems: "center",
+  },
+  image: {
+    width: 90,
+    height: 90,
+    borderRadius: 100,
+    backgroundColor: "red",
+    borderWidth: 1,
+    borderColor: colorsTheme.gray,
+  },
+  bodyConten: {
+    width: 200,
+  },
+  bodyInfo: {
+    justifyContent: "center",
     alignItems: "center",
   },
   header: {
@@ -33,7 +48,7 @@ export const styles = StyleSheet.create({
     marginBottom: 5,
   },
   add: {
-    justifyContent: "space-between",
+    justifyContent: "space-evenly",
     flexDirection: "row",
   },
   quantity: {

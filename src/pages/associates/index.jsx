@@ -14,7 +14,6 @@ const Associates = ({ navigation }) => {
   const renderItem = ({ item }) => (
     <AssociateItem
       item={item}
-      nAssociate={associates.length}
       onselected={onHandlerAssociate}
     />
   );

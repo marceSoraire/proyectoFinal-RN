@@ -1,4 +1,4 @@
-import Ionicons from "@expo/vector-icons/Ionicons";
+import { MaterialIcons } from "@expo/vector-icons";
 import { useLayoutEffect, useState } from "react";
 import { TouchableOpacity } from "react-native";
 import MapView, { Marker } from "react-native-maps";
@@ -34,9 +34,9 @@ const Maps = ({ navigation, route }) => {
         <TouchableOpacity
           disabled={!selectedLocation}
           onPress={onHandlerSave}>
-          <Ionicons
-            name="md-save-sharp"
-            size={23}
+          <MaterialIcons
+            name="add-location-alt"
+            size={26}
             color={!selectedLocation ? colorsTheme.text : colorsTheme.white}
           />
         </TouchableOpacity>

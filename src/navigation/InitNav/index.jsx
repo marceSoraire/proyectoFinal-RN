@@ -1,7 +1,7 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import { colorsTheme } from "../../constants";
-import { Disciplines, Category, Section, NewAssociates } from "../../pages/index";
+import { Disciplines, Category, Section } from "../../pages/index";
 const Stack = createNativeStackNavigator();
 
 const InitNavigator = () => {

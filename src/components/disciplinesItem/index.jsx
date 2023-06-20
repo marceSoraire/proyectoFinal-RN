@@ -8,11 +8,13 @@ const DisciplinesItem = ({ item, onSelected }) => {
     <View style={styles.container}>
       <TouchableOpacity
         onPress={() => onSelected(item)}
-        style={styles.containerTouchable}
-      >
+        style={styles.containerTouchable}>
         <View>
           <Text style={styles.name}>{item.name}</Text>
-          <Image source={{ uri: item.image }} style={styles.image} />
+          <Image
+            source={{ uri: item.image }}
+            style={styles.image}
+          />
         </View>
       </TouchableOpacity>
     </View>

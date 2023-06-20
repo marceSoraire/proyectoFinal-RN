@@ -15,9 +15,11 @@ const SportNavigator = () => {
         },
         headerTintColor: colorsTheme.black,
         headerTitleStyle: { fontFamily: "italic" },
-      }}
-    >
-      <Stack.Screen name="Sport" component={Sports} />
+      }}>
+      <Stack.Screen
+        name="Sport"
+        component={Sports}
+      />
     </Stack.Navigator>
   );
 };

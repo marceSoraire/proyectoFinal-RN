@@ -6,12 +6,7 @@ import { TeachersItem } from "../../components/index";
 import { TEACHERS } from "../../constants/index";
 
 const Teachers = () => {
-  const onRemove = (item) => {
-    console.warn(item.id);
-  };
-  const renderItem = ({ item }) => (
-    <TeachersItem item={item} onRemove={onRemove} />
-  );
+  const renderItem = ({ item }) => <TeachersItem item={item} />;
   const keyExtractor = (item) => item.id.toString();
   return (
     <SafeAreaView style={styles.container}>
