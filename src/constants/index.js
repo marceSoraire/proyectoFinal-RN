@@ -4,3 +4,4 @@ export * from "./data/disciplines";
 export * from "./data/sports";
 export * from "./data/techers";
 export * from "./firebase/index";
+export * from "./data/escudo";

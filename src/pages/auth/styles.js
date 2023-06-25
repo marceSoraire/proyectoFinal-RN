@@ -14,8 +14,8 @@ export const styles = StyleSheet.create({
     fontSize: 22,
   },
   image: {
-    width: 300,
-    height: 300,
+    width: 280,
+    height: 280,
   },
   content: {
     width: "80%",
@@ -27,6 +27,10 @@ export const styles = StyleSheet.create({
     fontFamily: "medium",
     fontSize: 18,
     textAlign: "center",
+  },
+  eye: {
+    flexDirection: "row",
+    justifyContent: "space-between",
   },
   linkContainer: {
     justifyContent: "center",
@@ -55,25 +59,4 @@ export const styles = StyleSheet.create({
   submit: {
     paddingVertical: 5,
   },
-  // containerStyle: {
-  //   flex: 1,
-  //   justifyContent: "center",
-  //   alignItems: "center",
-  // },
-  // modalContainer: {
-  //   width: "75%",
-  //   minHeight: 110,
-  //   justifyContent: "space-around",
-  //   alignItems: "center",
-  //   padding: 20,
-  //   borderRadius: 10,
-  //   borderWidth: 1,
-  //   borderColor: colorsTheme.secondary,
-  //   backgroundColor: colorsTheme.primary,
-  // },
-  // modalTitle: {
-  //   fontSize: 14,
-  //   fontFamily: "medium",
-  //   textAlign: "center",
-  // },
 });

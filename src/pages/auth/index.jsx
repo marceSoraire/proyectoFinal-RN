@@ -1,14 +1,16 @@
+import { Feather } from "@expo/vector-icons";
 import { useState } from "react";
 import { View, Text, Image, TextInput, Button, TouchableOpacity } from "react-native";
 import { useDispatch } from "react-redux";
 
 import { styles } from "./styles";
-import { colorsTheme } from "../../constants";
+import { colorsTheme, ESCUDO } from "../../constants";
 import { signIn, signUp } from "../../store/actions";
 
 const Auth = () => {
   const dispatch = useDispatch();
   const [isLogin, setIsLogin] = useState(true);
+  const [eye, setEye] = useState(true);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const title = isLogin ? "Login" : "Register";
@@ -22,13 +24,29 @@ const Auth = () => {
   const onHandleAuth = () => {
     dispatch(isLogin ? signIn({ email, password }) : signUp({ email, password }));
   };
+  const onHandlerEyes = () => setEye(!eye);
+  const SetEye = () =>
+    eye ? (
+      <Feather
+        name="eye-off"
+        size={24}
+        color={colorsTheme.black}
+      />
+    ) : (
+      <Feather
+        name="eye"
+        size={24}
+        color={colorsTheme.black}
+      />
+    );
+
   return (
     <View style={styles.container}>
       <View>
         <Text style={styles.textInit}>Club Atletico Nueva Era</Text>
         <Image
           source={{
-            uri: "https://arofusa.com/wp-content/uploads/2019/09/nuevonuevaera.png",
+            uri: ESCUDO,
           }}
           style={styles.image}
         />
@@ -46,16 +64,21 @@ const Auth = () => {
           value={email}
         />
         <Text style={styles.label}>Password</Text>
-        <TextInput
-          styles={styles.input}
-          placeholder="**********"
-          placeholderTextColor={colorsTheme.text}
-          secureTextEntry
-          autoCapitalize="none"
-          autoCorrect={false}
-          onChangeText={(text) => setPassword(text)}
-          value={password}
-        />
+        <View style={styles.eye}>
+          <TextInput
+            styles={styles.input}
+            placeholder="**********"
+            placeholderTextColor={colorsTheme.text}
+            secureTextEntry={eye}
+            autoCapitalize="none"
+            autoCorrect={false}
+            onChangeText={(text) => setPassword(text)}
+            value={password}
+          />
+          <TouchableOpacity onPress={onHandlerEyes}>
+            <SetEye />
+          </TouchableOpacity>
+        </View>
         <TouchableOpacity
           styles={styles.link}
           onPress={onHandleChangeAuth}>

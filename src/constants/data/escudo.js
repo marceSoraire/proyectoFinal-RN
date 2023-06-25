@@ -1,0 +1,2 @@
+export const ESCUDO =
+  "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi80haNODLSJBEzax71cvre4_CLubr8lMMGtrlTW1djfo4IhLLS6frx-LwNZ5fPw5agxJVAOQLYIAVPDi40AWtTLBSma0RDjT4Hlo6rOen_h31Bjrw27cBZclZAmsSrcPUUj3D-dt2A_P9BShNjUaAOALfxtOlFt0QdWLN623qgpXhS8xdWXJGdZ9yU/s16000/Argentina.pngR";
