@@ -4,7 +4,7 @@ export const SPORTS = [
     name: "Pel. Futbol",
     price: 18000,
     image:
-      "https://essential.vtexassets.com/arquivos/ids/543849-800-auto?v=637849502657400000&width=800&height=auto&aspect=true",
+      "https://thumbs.nosto.com/quick/rbxh5h46/8/596762_alt_148cd1a23921cc00df46ea148296dc320d514e72fb6331e3392541511fbd2251/00c8248b8dc3a65387f285e609db13b67a7b6a4f413c4ce8ea1196a4275ec582/A",
   },
   {
     id: 2,

@@ -30,7 +30,6 @@ export const styles = StyleSheet.create({
     width: 90,
     height: 90,
     borderRadius: 100,
-    backgroundColor: "red",
     borderWidth: 1,
     borderColor: colorsTheme.gray,
   },
