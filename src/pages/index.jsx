@@ -13,3 +13,4 @@ export { default as DetailsAssociates } from "./detailsAssociates/index";
 export { default as SavePlace } from "./savePlace/index";
 export { default as Maps } from "./maps/index";
 export { default as DetailsPlaces } from "./detailsPlaces/index";
+export { default as Orders } from "./orders/index";

@@ -2,7 +2,7 @@ import { useFonts } from "expo-font";
 import { ActivityIndicator, View } from "react-native";
 import { Provider } from "react-redux";
 
-import { deletePlaces, init } from "./db";
+import { init } from "./db";
 import AppNavigation from "./navigation";
 import store from "./store";
 import { styles } from "./styles";
@@ -11,10 +11,6 @@ init()
   .then(() => {
     console.log("Iniciando database");
   })
-  // .then(() => {
-  //   deletePlaces();
-  //   console.log("seBorro");
-  // })
   .catch((err) => {
     console.log("Inicio fallido");
     console.log(err);

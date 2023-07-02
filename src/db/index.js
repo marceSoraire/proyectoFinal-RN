@@ -58,22 +58,3 @@ export const selectPlaces = () => {
 
   return promise;
 };
-
-export const deletePlaces = () => {
-  const promise = new Promise((resolve, reject) => {
-    db.transaction((tx) => {
-      tx.executeSql(
-        "DELETE FROM places",
-        [],
-        (_, result) => {
-          resolve(result);
-        },
-        (_, err) => {
-          reject(err);
-        }
-      );
-    });
-  });
-
-  return promise;
-};

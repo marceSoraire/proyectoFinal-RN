@@ -18,7 +18,6 @@ const placeReducer = (state = intialState, action) => {
         places: action.payload,
       };
 
-    // eslint-disable-next-line no-fallthrough
     default:
       return state;
   }

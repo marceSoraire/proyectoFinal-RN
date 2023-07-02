@@ -1,4 +1,4 @@
-import { sumaTotal, rest } from "../../utils/functions/index";
+import { sumaTotal } from "../../utils/functions/index";
 import { cartTypes } from "../types";
 
 const { ADD_CART, REMOVE_CART, CONFIRM_SPORT, REST } = cartTypes;

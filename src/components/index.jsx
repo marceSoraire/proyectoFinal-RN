@@ -9,3 +9,4 @@ export { default as PlaceItem } from "./placeItem/index";
 export { default as AssociateItem } from "./associateItem/index";
 export { default as MapPreview } from "./mapPreview/index";
 export { default as ImageUbi } from "./imageubi/index";
+export { default as OrdersItem } from "./ordersItem/index";

@@ -1,7 +1,9 @@
+import { FontAwesome5 } from "@expo/vector-icons";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { TouchableOpacity } from "react-native";
 
 import { colorsTheme } from "../../constants";
-import { Sports } from "../../pages";
+import { Sports, Orders } from "../../pages";
 
 const Stack = createNativeStackNavigator();
 
@@ -19,6 +21,21 @@ const SportNavigator = () => {
       <Stack.Screen
         name="Sport"
         component={Sports}
+        options={({ navigation }) => ({
+          headerRight: () => (
+            <TouchableOpacity onPress={() => navigation.navigate("Orders")}>
+              <FontAwesome5
+                name="inbox"
+                size={24}
+                color={colorsTheme.white}
+              />
+            </TouchableOpacity>
+          ),
+        })}
+      />
+      <Stack.Screen
+        name="Orders"
+        component={Orders}
       />
     </Stack.Navigator>
   );

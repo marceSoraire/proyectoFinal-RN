@@ -15,7 +15,7 @@ const Auth = () => {
   const [password, setPassword] = useState("");
   const title = isLogin ? "Login" : "Register";
   const buttonTitle = isLogin ? "Login" : "Register";
-  const messageText = isLogin ? "Don´t have an account?" : "Already have an account?";
+  const messageText = isLogin ? "No tengo una cuneta!" : "Ya tengo una cuenta!";
 
   const onHandleChangeAuth = () => {
     setIsLogin(!isLogin);

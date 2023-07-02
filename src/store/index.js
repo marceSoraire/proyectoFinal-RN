@@ -9,6 +9,7 @@ import {
   authReducer,
   placeReducer,
   associateReducer,
+  ordersReducer,
 } from "./reducers";
 
 const rootReducer = combineReducers({
@@ -19,6 +20,7 @@ const rootReducer = combineReducers({
   auth: authReducer,
   place: placeReducer,
   associate: associateReducer,
+  orders: ordersReducer,
 });
 
 export default createStore(rootReducer, applyMiddleware(thunk));
